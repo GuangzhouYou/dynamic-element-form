@@ -22,7 +22,7 @@
       data() {
           var validateDate1 = (rule, value, callback) => {
               console.log("date1", value)
-              if (value === '') {
+              if (value === '' || value === null || value === undefined) {
                   callback(new Error('Please input the date1'));
               } else {
                   if (this.form.date1 !== '') {
@@ -34,7 +34,7 @@
   
           var validateDate2 = (rule, value, callback) => {
               console.log("date2", value)
-              if (value === '') {
+              if (value === '' || value === null || value === undefined) {
                   callback(new Error('Please input the date2'));
               } else {
                   if (this.form.date2 < this.form.date1) {
